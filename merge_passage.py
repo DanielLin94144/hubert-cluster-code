@@ -3,11 +3,11 @@ import torch
 import numpy as np 
 from tqdm import tqdm
 
-with open('/home/daniel094144/E2E-SpokenQA/train_segment_id.json', 'r') as f:
+with open('/home/daniel094144/E2E-SpokenQA/dev_segment_id.json', 'r') as f:
     segment_dict = json.load(f)
 
-data_dir = '/home/daniel094144/E2E-SpokenQA/train_code'
-output_dir = '/home/daniel094144/E2E-SpokenQA/train_passage_code'
+data_dir = '/home/daniel094144/data/SQA_code/w2v2_large_512/dev_code'
+output_dir = '/home/daniel094144/data/SQA_code/w2v2_large_512/dev_code'
 
 for passage, segment_list in tqdm(segment_dict.items()):
     for idx, id in enumerate(segment_list):
